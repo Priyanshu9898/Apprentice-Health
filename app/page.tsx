@@ -10,6 +10,7 @@ const page = () => {
       <HeroSection />
       <BenefitsSection />
       <CardsSection />
+      
     </>
   );
 };

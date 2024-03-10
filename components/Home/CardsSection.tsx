@@ -3,6 +3,7 @@
 import React from "react";
 import AnimatedCard from "../shared/AnimatedCard";
 import { motion } from "framer-motion";
+import { Button } from "../ui/button";
 
 const cardsData = [
   {
@@ -60,6 +61,28 @@ const childVariants = {
   },
 };
 
+const buttonVariants = {
+  hover: {
+    scale: 1.05,
+    transition: {
+      duration: 0.2,
+      ease: "easeInOut",
+    },
+    transformOrigin: "center",
+  },
+
+  initial: {
+    scale: 1,
+  },
+};
+
+const buttonStyle = `
+  bg-gradient-to-r from-blue-500 to-teal-400 text-white font-bold py-3 px-6 rounded-md
+  hover:from-teal-400 hover:to-blue-500 shadow-md
+  transform transition-transform duration-200 ease-in-out
+  transform-origin:center
+`;
+
 const CardsSection = () => {
   return (
     <div className="container mx-auto px-4 xl:px-32 py-8 overflow-hidden">
@@ -85,6 +108,31 @@ const CardsSection = () => {
           <AnimatedCard key={index} {...card} />
         ))}
       </div>
+
+      <motion.div
+        className="mt-20 py-5 opacity-0"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
+        <p className="text-base md:text-2xl  text-[#828D9C] text-center font-semibold">
+          Apprentice Health modules are designed for clinics, infusion suites,
+          peri-operative units, emergency departments and inpatient units of all
+          sizes. Start with a single module at an individual clinic or rapidly
+          deploy across an entire enterprise.
+        </p>
+      </motion.div>
+
+      <motion.div className="flex w-full items-center justify-center">
+        <motion.button
+          variants={buttonVariants}
+          whileHover="hover"
+          initial="initial"
+          className={`inline-block ${buttonStyle}`}
+        >
+          Schedule a Demo
+        </motion.button>
+      </motion.div>
     </div>
   );
 };
