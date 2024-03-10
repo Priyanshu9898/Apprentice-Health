@@ -100,5 +100,9 @@
 }
 
 .hover-link:hover {
-  color: #00c3ff; 
+  color: #00c3ff;
+}
+
+.active {
+  color: #00c3ff;
 }
