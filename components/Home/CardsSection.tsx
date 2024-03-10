@@ -82,6 +82,10 @@ const buttonStyle = `
   transform transition-transform duration-200 ease-in-out
   transform-origin:center
 `;
+const handleEmailOpen = () => {
+  window.location.href =
+    "mailto:priyanshumalaviya9210@gmail.com?subject=Reach Out to me";
+};
 
 const CardsSection = () => {
   return (
@@ -128,6 +132,7 @@ const CardsSection = () => {
           variants={buttonVariants}
           whileHover="hover"
           initial="initial"
+          onClick={handleEmailOpen}
           className={`inline-block ${buttonStyle}`}
         >
           Talk To Us

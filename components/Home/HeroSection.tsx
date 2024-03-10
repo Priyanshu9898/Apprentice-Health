@@ -62,6 +62,10 @@ const HeroSection = () => {
   transform-origin:center
 `;
 
+const handleEmailOpen = () => {
+    window.location.href = "mailto:priyanshumalaviya9210@gmail.com?subject=Reach Out to me";
+  };
+
   return (
     <>
       <motion.div
@@ -98,6 +102,7 @@ const HeroSection = () => {
           variants={buttonVariants}
           whileHover="hover"
           initial="initial"
+          onClick={handleEmailOpen}
           className={`inline-block ${buttonStyle}`}
         >
           Schedule a Demo
