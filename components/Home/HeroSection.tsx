@@ -40,6 +40,28 @@ const HeroSection = () => {
     },
   };
 
+  const buttonVariants = {
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+        ease: "easeInOut",
+      },
+      transformOrigin: "center",
+    },
+
+    initial: {
+      scale: 1,
+    },
+  };
+
+  const buttonStyle = `
+  bg-gradient-to-r from-blue-500 to-teal-400 text-white font-bold py-3 px-6 rounded-md
+  hover:from-teal-400 hover:to-blue-500 shadow-md
+  transform transition-transform duration-200 ease-in-out
+  transform-origin:center
+`;
+
   return (
     <>
       <motion.div
@@ -71,8 +93,13 @@ const HeroSection = () => {
             occupancy and keep exam rooms fully utilized without making
             clinicians busier.
           </motion.p>
-          <motion.div variants={childVariants}>
-            <Button>Schedule a Demo</Button>
+          <motion.div
+            variants={buttonVariants}
+            whileHover="hover"
+            initial="initial"
+            className="w-full inline-block"
+          >
+            <Button className={buttonStyle}>Schedule a Demo</Button>
           </motion.div>
         </motion.div>
 
