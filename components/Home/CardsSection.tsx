@@ -130,7 +130,7 @@ const CardsSection = () => {
           initial="initial"
           className={`inline-block ${buttonStyle}`}
         >
-          Schedule a Demo
+          Talk To Us
         </motion.button>
       </motion.div>
     </div>

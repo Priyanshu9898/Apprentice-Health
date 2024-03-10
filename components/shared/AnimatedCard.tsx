@@ -45,6 +45,7 @@ const AnimatedCard: React.FC<CardProps> = ({
         initial="hidden"
         variants={variants}
         whileHover={{ scale: 1.05 }}
+        transition={{duration: 0.4, type: "spring"}}
         className="flex flex-row h-full lg:h-[282px] px-2 items-center bg-white rounded-lg shadow-lg overflow-hidden mx-auto mb-6 md:mb-0"
       >
         <div className="flex-shrink-0">

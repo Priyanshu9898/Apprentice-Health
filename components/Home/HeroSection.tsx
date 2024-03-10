@@ -93,14 +93,16 @@ const HeroSection = () => {
             occupancy and keep exam rooms fully utilized without making
             clinicians busier.
           </motion.p>
-          <motion.div
-            variants={buttonVariants}
-            whileHover="hover"
-            initial="initial"
-            className="w-full inline-block"
-          >
-            <Button className={buttonStyle}>Schedule a Demo</Button>
-          </motion.div>
+         
+        <motion.button
+          variants={buttonVariants}
+          whileHover="hover"
+          initial="initial"
+          className={`inline-block ${buttonStyle}`}
+        >
+          Schedule a Demo
+        </motion.button>
+     
         </motion.div>
 
         {/* Hero Image Section */}
