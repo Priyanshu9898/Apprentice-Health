@@ -1,8 +1,11 @@
 import React from 'react'
+import HeroSection from './components/HeroSectionScheduling'
 
 const Scheduling = () => {
   return (
-    <div>Scheduling</div>
+    <>
+      <HeroSection />
+    </>
   )
 }
 

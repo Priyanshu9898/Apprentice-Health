@@ -1,8 +1,13 @@
 import React from 'react'
+import HeroSectionWorkflow from './components/HeroSectionWorkFlow'
+import InfoSection from './components/InfoSection'
 
 const Workflow = () => {
   return (
-    <div>Workflow</div>
+    <>
+      <HeroSectionWorkflow />
+      <InfoSection />
+    </>
   )
 }
 

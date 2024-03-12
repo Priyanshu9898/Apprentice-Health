@@ -1,8 +1,11 @@
 import React from 'react'
+import HeroSection from './components/HeroSectionAnalytics'
 
 const Analytics = () => {
   return (
-    <div>Analytics</div>
+    <>
+      <HeroSection />
+    </>
   )
 }
 
